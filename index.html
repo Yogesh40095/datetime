@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & time</title>
+
+</head>
+<body>
+    <div class="wrapper">
+
+    </div>
+    <script>
+        const dt=new Date()
+     let clock="";
+     document.querySelector("wrapper").innerHTML+="";
+     setInterval(()=>{
+        clock=clock+ getDayName(dt.getDate());
+        clock=clock+"/"+  dt.getMonth()+1;
+        clock=clock+"/"+  dt.getFullYear();
+        clock=clock+" "+  dt.getHours();
+        clock=clock+":"+  dt.getMinutes();
+        clock=clock+":"+  dt.getSeconds();
+        console.log(clock)
+        document.querySelector("wrapper").innerHTML=clock;
+     },1000)
+     //     document.querySelector(wrapper).i
+    //     setInterval(()=>{
+    //         let a=new Date()
+    //   console.log(a);
+    //   let b=a.getDate();
+    //   let f=a.getMonth()+1;
+    //   let c=a.getFullYear();
+    //   let d=a.getHours();
+    //   let e=a.getMinutes();
+    //   let g=a.getSeconds();
+      
+    // //   console.log(b+f+c)
+    // console.log(b+"/"+f+"/"+c+" "+d+":"+e+":"+g)
+    //     },1000)
+    </script>
+</body>
+</html>
